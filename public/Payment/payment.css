@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex_column_reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.space_between {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.space_evenly {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.justify_center {
+    justify-content: center;
+}
+
+.justify_flex_start {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.justify_flex_end {
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.center {
+    align-items: center;
+}
+
+.align_flex_start {
+    align-items: flex-start;
+    /* flex-wrap: wrap; */
+}
+
+.flex_row {
+    display: flex;
+}
+
+.flex_row_reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    position: relative;
+    text-decoration: none;
+    color: #FFF;
+}
+
+button {
+    border: none;
+    padding: 0.6rem 1rem;
+    background: #B83169;
+    color: #FFF;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.6rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+input {
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.width_full {
+    width: 100%;
+}
+
+.height_full {
+    height: 100%;
+}
+
+.mt4 {
+    margin: 4rem 0 0 0;
+}
+
+.container {
+    min-height: 100vh;
+    font-family: 'Nunito', 'sans-serif';
+    /* display: none; */
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    background: #ececec;
+}
+
+.loader img {
+    width: 30%;
+    height: 30%;
+    object-fit: contain;
+}
+
+.hamburger {
+    display: none;
+}
+
+.mobile_menu {
+    display: none;
+}
+
+.container > .content_wrapper > .right_section {
+    position: absolute;
+    width: 80%;
+    top: 5rem;
+    left: 20%;
+    height: calc(100% - 5rem);
+    padding: 2rem;
+}
+
+.container .content_wrapper .right_section > .header {
+    height: 4rem;
+    width: 100%;
+}
+
+.container .content_wrapper .right_section > .header p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #19214F;
+}
+
+.container .content_wrapper .right_section .header button {
+    height: 3rem;
+    width: 9.3rem;
+    border-radius: 0.6rem;
+    background: linear-gradient(260.56deg, #19214F -2.94%, #14BC66 81.33%);
+    box-shadow: 0px 5px 6px rgba(13, 27, 103, 0.5);
+    font-weight: 600;
+}
+
+.container .content_wrapper .right_section .information {
+    padding: 1rem 0;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.container .content_wrapper .right_section .information .left_section {
+    height: 100%;
+    margin: 0 30% 0 0;
+}
+
+.container .content_wrapper .right_section .information .right_section {
+    width: 50%;
+}
+
+.container .content_wrapper .right_section .information .right_section input {
+    height: 2.5rem;
+    background: #FFF;
+    border-radius: 0.6rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem 1rem;
+}
+
+.container .content_wrapper .right_section .information .right_section p:nth-child(2n) {
+    margin: 0 0 1rem 0;
+}
+
+.container .content_wrapper .right_section .information p:nth-child(1) {
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.container .content_wrapper .right_section .information p:nth-child(2n) {
+    font-size: 0.9rem;
+}
+
+.container .content_wrapper .right_section .card {
+    width: 80%;
+    padding: 1rem;
+    border-radius: 0.6rem;
+    background: #00A962;
+    color: #FFF;
+    margin: 0 0 2rem 0;
+}
+
+.container .content_wrapper .right_section .card img {
+    width: 10%;
+    margin: 0 2rem 0 0;
+}
+
+.container .content_wrapper .right_section .card .text p:nth-child(2) {
+    margin: 0;
+}
+
+.container .content_wrapper .right_section .add_card svg {
+    margin: 0 1rem 0 0;
+}
+
+.container .content_wrapper .right_section .add_card p:nth-child(2) {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.container .content_wrapper .appointments {
+    width: 100%;
+    overflow: scroll;
+}
+
+.container .content_wrapper .appointments::-webkit-scrollbar {
+    display: none;
+}
+
+.container .content_wrapper .appointments .header,
+.container .content_wrapper .appointments .values {
+    height: 3rem;
+    color: #FFF;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background: #00A962;
+    margin: 1rem 0 0 0;
+    padding: 0 1rem;
+    border-radius: 0.6rem;
+}
+
+.container .content_wrapper .appointments .values {
+    background: #FFF;
+    color: #464646;
+    box-shadow: 0px 5px 6px rgba(0, 169, 98, 0.5);
+    height: 5rem;
+}
+
+/* .container .content_wrapper .appointments .values div {
+    height: 3rem;
+    width: 3rem;
+    border-radius: 0.6rem;
+    background: #DFE0E0;
+} */
+
+.container .content_wrapper .appointments .header p:nth-child(1),
+.container .content_wrapper .appointments .values p:nth-child(1) {
+    width: 8%;
+    text-align: center;
+}
+
+.container .content_wrapper .appointments .header p:nth-child(2),
+.container .content_wrapper .appointments .values p:nth-child(2) {
+    width: 6%;
+}
+
+.container .content_wrapper .appointments .header p:nth-child(3),
+.container .content_wrapper .appointments .values p:nth-child(3) {
+    text-align: center;
+    width: 12%;
+}
+
+.container .content_wrapper .appointments .header p:nth-child(4),
+.container .content_wrapper .appointments .values p:nth-child(4) {
+    width: 12%;
+}
+
+.container .content_wrapper .appointments .header p:nth-child(5),
+.container .content_wrapper .appointments .values p:nth-child(5) {
+    width: 10%;
+}
+
+.container .content_wrapper .appointments .header p:nth-child(6),
+.container .content_wrapper .appointments .values p:nth-child(6) {
+    width: 10%;
+}
+
+.container .content_wrapper .appointments .header p:nth-child(7),
+.container .content_wrapper .appointments .values p:nth-child(7) {
+    width: 10%;
+}
+
+.container .content_wrapper .appointments .header p:nth-child(8),
+.container .content_wrapper .appointments .values div {
+    width: 6%;
+}
+
+.container .content_wrapper .appointments .values span {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.3rem;
+    background: #9699A0;
+}
+
+.container .content_wrapper .popup button {
+    background: none;
+}
+
+.container .popup .buttons {
+    margin-left: 10%;
+}
+
+.container .popup .buttons button {
+    width: 9.5rem;
+    height: 3rem;
+    border-radius: 0.6rem;
+}
+
+.container .popup .buttons button:nth-child(1) {
+    background: linear-gradient(337deg, #19214F 0%, #14BC66 100%);
+    box-shadow: 0px 5px 6px 0px rgba(13, 27, 103, 0.50);
+    margin: 0 1rem 0 0;
+}
+
+.container .popup .buttons button:nth-child(2) {
+    background: #FFF;
+    border: 2px solid #F54A4A;
+    color: #F54A4A;
+}
+
+.container .card_details {
+    position: absolute;
+    padding: 2rem;
+    background: #FFF;
+    border-radius: 0.6rem;
+    border: 2px solid #000;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    width: 35%;
+    display: none;
+    z-index: 21;
+}
+
+.container .card_details .header {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+}
+
+.container .card_details .header h1 {
+    font-size: 1rem;
+}
+
+.container .card_details .input {
+    margin: 0 0 1.5rem 0;
+}
+
+.container .card_details .input .image_input {
+    position: relative;
+    margin: 0 0 1.5rem 0;
+}
+
+.container .card_details .input .half_input input {
+    width: 48%;
+}
+
+.container .card_details .input .image_input img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1rem;
+    margin: auto 0;
+}
+
+.container .card_details input {
+    height: 3rem;
+    width: 100%;
+    border-radius: 0.6rem;
+    font-size: 1rem;
+    background: #FFF;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 0.5rem;
+    padding-left: 1rem;
+}
+
+.container .card_details input::placeholder {
+    font-size: 1rem;
+}
+
+.container .card_details .input.flex_row p {
+    width: 20%;
+}
+
+.container .card_details .input.flex_row input {
+    width: 80%;
+}
+
+.container .card_details button {
+    width: 100%;
+    height: 3rem;
+    background: linear-gradient(337deg, #19214F 0%, #14BC66 100%);
+    box-shadow: 0px 5px 6px 0px rgba(13, 27, 103, 0.50);
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container .content_wrapper .appointments .header,
+    .container .content_wrapper .appointments .values {
+        width: 60rem;
+    }
+
+    .container .card_details {
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container .content_wrapper .sidebar {
+        width: 30% !important;
+    }
+
+    .container .content_wrapper > .right_section {
+        left: 30%;
+        width: 70%;
+    }
+
+    .container .content_wrapper .appointments .header,
+    .container .content_wrapper .appointments .values {
+        width: 50rem;
+    }
+
+    .container .card_details {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 400px) and (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container .content_wrapper .sidebar {
+        width: 30% !important;
+    }
+
+    .container .content_wrapper > .right_section {
+        left: 30%;
+        width: 70%;
+    }
+
+    .container .content_wrapper .appointments .header,
+    .container .content_wrapper .appointments .values {
+        width: 50rem;
+    }
+
+    .container .card_details {
+        width: 60%;
+    }
+}
