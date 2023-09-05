@@ -167,6 +167,7 @@ input:focus {
 }
 
 .container .content_wrapper .right_section .service {
+    position: relative;
     width: 11rem;
     height: 10rem;
     background: #FFF;
