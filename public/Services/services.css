@@ -190,6 +190,15 @@ input:focus {
     cursor: pointer;
 }
 
+.container .content_wrapper .right_section .service div.flex_row.center.space_between {
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.container .content_wrapper .right_section .service:hover div.flex_row.center.space_between {
+    opacity: 1;
+}
+
 .container .content_wrapper .popup .half_input .image {
     width: 13rem;
     height: 13rem;
