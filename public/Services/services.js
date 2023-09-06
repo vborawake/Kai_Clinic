@@ -2,6 +2,14 @@ const popup = document.querySelector('.popup.flex_column');
 
 function showServices(e) {
     popup.style.display = 'flex';
+    if (e.currentTarget.tagName === 'IMG') {
+        popup.querySelector('.header p').innerText = 'Edit Service';
+        popup.querySelector('#service_name').value = e.currentTarget.parentElement.previousElementSibling.innerText;
+    }
+    else {
+        popup.querySelector('.header p').innerText = 'Add Services';
+        popup.querySelector('#service_name').value = '';
+    }
     requestAnimationFrame(() => {
         popup.style.transform = 'scale(1)';
     });
